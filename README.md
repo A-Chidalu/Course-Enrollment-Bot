@@ -21,6 +21,8 @@ This program uses selenium webdriver to access York University's course enrollme
 Getting started with this program is simple. When all the dependancies have finished installing, simply run `python window.py`
 You window that looks like this:
 ![Empty-window](https://github.com/A-Chidalu/Course-Enrollment-Bot/blob/master/img/window.PNG)
+
+
 Fill out your **York Passport Username and Password**, browse to the correct location of the web driver, and click submit.
 Your course will be automatically enrolled
 
