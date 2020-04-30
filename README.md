@@ -19,7 +19,7 @@ This program uses selenium webdriver to access York University's course enrollme
 
 ## Getting Started
 Getting started with this program is simple. When all the dependancies have finished installing, simply run `python window.py`
-You window that looks like this:
+You will see a window that looks like this:
 ![Empty-window](https://github.com/A-Chidalu/Course-Enrollment-Bot/blob/master/img/window.PNG)
 
 
