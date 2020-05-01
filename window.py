@@ -36,6 +36,7 @@ def browse_for_driver():
     return window.filename
 
 def validate():
+    global COURSE_CODE
     if not check_username():
         alert_popup("No Username Provided", "Please Provide a valid Username", "")
         return
@@ -55,7 +56,7 @@ def validate():
         alert_popup("No Path To driver provided", "Please Provide a valid driver path.", "")
         return
     
-    run_script(YORK_USERNAME, YORK_PASSWORD, PATH_TO_DRIVER)
+    run_script(YORK_USERNAME, YORK_PASSWORD, COURSE_CODE, PATH_TO_DRIVER)
 
 def start_browsing():
     global PATH_TO_DRIVER
@@ -94,8 +95,8 @@ def alert_popup(title, message, path):
     b.pack()
     mainloop() 
 
-def run_script(YORK_USERNAME, YORK_PASSWORD, PATH_TO_DRIVER):
-    os.system(f'script.py {YORK_USERNAME} {YORK_PASSWORD} "{PATH_TO_DRIVER}"')
+def run_script(YORK_USERNAME, YORK_PASSWORD, COURSE_CODE, PATH_TO_DRIVER):
+    os.system(f'script.py {YORK_USERNAME} {YORK_PASSWORD} {COURSE_CODE.strip()} "{PATH_TO_DRIVER}"')
 
 
 

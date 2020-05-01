@@ -17,6 +17,7 @@ from pathlib import Path
 parser = argparse.ArgumentParser()
 parser.add_argument("username")
 parser.add_argument("password")
+parser.add_argument("course_code")
 parser.add_argument("file_path", type=Path)
 p = parser.parse_args()
 
@@ -30,7 +31,7 @@ WEBSITE = "https://wrem.sis.yorku.ca/Apps/WebObjects/REM.woa/wa/DirectAction/rem
 #Defining important variables
 york_user_name = p.username
 york_password = p.password
-COURSE_KEY_CODE = "V66A03"
+COURSE_KEY_CODE = p.course_code
 success_message = "The course has been successfully added."
 error_message = "The course has not been added."
 reason_message = "The course you are trying to add is full. Please refer to the online course timetable for alternate choices and try again."
