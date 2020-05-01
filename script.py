@@ -12,6 +12,7 @@ from selenium.webdriver.support.ui import Select
 from simple_chalk import chalk, green
 import argparse
 from pathlib import Path
+import os
 
 #Parsing the command line arguments passed
 parser = argparse.ArgumentParser()
@@ -87,8 +88,12 @@ if result_of_adding_course.text == error_message:
     print(chalk.red("The course: " + course_title +  " could not be added for the following reason:"))
     reason_for_failure = driver.find_element_by_xpath("/html/body/form/div[1]/table/tbody/tr[4]/td[2]/table/tbody/tr/td/table[2]/tbody/tr[2]/td[2]/span/font/b")
     print(chalk.red(reason_for_failure.text))
+    message_to_send = "The course: " + course_title +  " could not be added for the following reason:"+ reason_for_failure.text
+    os.system(f'text-me.py "{message_to_send}"')
 else:
     print(green(result_of_adding_course.text))
+    message_to_send = success_message
+    os.system(f'text-me.py "{message_to_send}"')
 
 driver.quit()
     
