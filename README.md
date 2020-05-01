@@ -15,7 +15,7 @@ This program uses selenium webdriver to access York University's course enrollme
 
 4. Have Python 3 or Greater installed on your machine
 5. Clone the repository
-6. run the command `pip3 install -r requirements.txt`
+6. run the command `pip3 install -r requirements.txt` or `pip install -r requirements.txt` (depending if you use mac or windows)
 
 ## Getting Started
 Getting started with this program is simple. When all the dependancies have finished installing, simply run `python window.py`
